@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     vCard.socialUrls['instagram'] = "instagram.com/roberto.valennte";
     vCard.version = "3.0";
 
-    let vCardData = vCard.getFormattedString;
+    let vCardData = vCard.getFormattedString();
     res.render('index', {vCard: vCardData});
 });
 

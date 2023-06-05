@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
 
     let vCardData = vCard.getFormattedString();
     vCardData = vCardData.replace("X-SOCIALPROFILE;", "SOCIALPROFILE;");
-    console.log(vCardData)
     res.render('index', {vCard: vCardData});
 });
 

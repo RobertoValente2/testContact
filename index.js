@@ -20,6 +20,8 @@ app.get('/', (req, res) => {
     vCard.version = "3.0";
 
     let vCardData = vCard.getFormattedString();
+    vCardData = vCardData.replace("X-SOCIALPROFILE;", "SOCIALPROFILE;");
+    console.log(vCardData)
     res.render('index', {vCard: vCardData});
 });
 
